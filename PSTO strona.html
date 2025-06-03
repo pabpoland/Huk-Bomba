@@ -29,15 +29,21 @@
       object-fit: cover;
     }
 
-    section {
-      margin-top: 40px;
-    }
-
     .player {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
     }
 
-    /* Zmniejszony rozmiar SVG boiska o połowę */
+    .player img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ccc;
+    }
+
     svg {
       max-width: 150px;
       height: auto;
@@ -99,21 +105,9 @@
       color: white;
     }
 
-    /* Kolory wyników */
-    .win {
-      color: green;
-      font-weight: bold;
-    }
-
-    .loss {
-      color: red;
-      font-weight: bold;
-    }
-
-    .draw {
-      color: goldenrod;
-      font-weight: bold;
-    }
+    .win { color: green; font-weight: bold; }
+    .loss { color: red; font-weight: bold; }
+    .draw { color: goldenrod; font-weight: bold; }
 
     ul {
       padding-left: 20px;
@@ -134,185 +128,88 @@
 </head>
 <body>
 
-  <header>
-    <img src="logo.jpg" alt="Logo PSTO Huk Bomba" class="logo" />
-    <h1>PSTO Huk Bomba</h1>
-    <p>🔥 "Z nami zawsze na bombie!"</p>
-  </header>
+<header>
+  <img src="img/logo.jpg" alt="Logo PSTO Huk Bomba" class="logo" />
+  <h1>PSTO Huk Bomba</h1>
+  <p>🔥 "Z nami zawsze na bombie!"</p>
+</header>
 
-  <section>
-    <h2>Skład drużyny</h2>
-    <div class="player"><strong>Pimpek (pomocnik):</strong> Mówi więcej niż biega. Wiecznie bez siły, bo „rzygał”. Jedyny z B-klasy.</div>
-    <div class="player"><strong>Lichu (obrona/bramkarz):</strong> Brodaty profesor futbolu i prawa. Technika lepsza niż kodeks karny.</div>
-    <div class="player"><strong>Szymon (ofensywny):</strong> Błyskawica z problemem celności – jak kopnie, to nie wiadomo gdzie piłka poleci.</div>
-    <div class="player"><strong>Mati Miśki (ofensywny):</strong> Tricki? Próbuje. Skuteczność? Różnie. Ale atmosfera? 10/10.</div>
-    <div class="player"><strong>Mati Kuchta (neutralny):</strong> Gra tylko jak się go uprosi. Znany z Tourana i niespodziewanych zagrań.</div>
-    <div class="player"><strong>Julu (obrończyni):</strong> Zmuszana do gry, ale jak już zagra – ściana nie do przejścia. Twarda babka!</div>
-    <div class="player"><strong>Pawełek (uniwersalny):</strong> Mały, ale wariat. Gra wszędzie i wszędzie dobrze.</div>
-  </section>
+<section>
+  <h2>Skład drużyny</h2>
 
-  <section>
-    <h2>Pozycje na boisku</h2>
-    <svg viewBox="0 0 300 500" width="300" height="500" aria-label="Boisko i pozycje graczy">
-      <rect x="0" y="0" width="300" height="500" fill="#a8d08d"/>
-      <line x1="0" y1="250" x2="300" y2="250" stroke="white" stroke-width="2"/>
-      <circle cx="150" cy="250" r="30" stroke="white" stroke-width="2" fill="none"/>
-      <circle cx="150" cy="250" r="2" fill="white"/>
-      <text x="150" y="60" text-anchor="middle" fill="black" font-size="18">Lichu</text>
-      <text x="80" y="200" text-anchor="middle" fill="black" font-size="14">Julu</text>
-      <text x="220" y="200" text-anchor="middle" fill="black" font-size="14">Pimpek</text>
-      <text x="80" y="300" text-anchor="middle" fill="black" font-size="14">Mati Miśki</text>
-      <text x="220" y="300" text-anchor="middle" fill="black" font-size="14">Szymon</text>
-      <text x="150" y="400" text-anchor="middle" fill="black" font-size="14">Pawełek</text>
-      <text x="150" y="470" text-anchor="middle" fill="black" font-size="14">Kuchta</text>
-    </svg>
-  </section>
+  <div class="player"><img src="img/pimpek.jpg" alt="Pimpek"><strong>Pimpek (pomocnik):</strong> Mówi więcej niż biega. Wiecznie bez siły, bo „rzygał”. Jedyny z B-klasy.</div>
+  <div class="player"><img src="img/lichu.jpg" alt="Lichu"><strong>Lichu (obrona/bramkarz):</strong> Brodaty profesor futbolu i prawa. Technika lepsza niż kodeks karny.</div>
+  <div class="player"><img src="img/szymon.jpg" alt="Szymon"><strong>Szymon (ofensywny):</strong> Błyskawica z problemem celności – jak kopnie, to nie wiadomo gdzie piłka poleci.</div>
+  <div class="player"><img src="img/mati_miski.jpg" alt="Mati Miśki"><strong>Mati Miśki (ofensywny):</strong> Tricki? Próbuje. Skuteczność? Różnie. Ale atmosfera? 10/10.</div>
+  <div class="player"><img src="img/kuchta.jpg" alt="Mati Kuchta"><strong>Mati Kuchta (neutralny):</strong> Gra tylko jak się go uprosi. Znany z Tourana i niespodziewanych zagrań.</div>
+  <div class="player"><img src="img/julu.jpg" alt="Julu"><strong>Julu (obrończyni):</strong> Zmuszana do gry, ale jak już zagra – ściana nie do przejścia. Twarda babka!</div>
+  <div class="player"><img src="img/pawel.jpg" alt="Pawełek"><strong>Pawełek (uniwersalny):</strong> Mały, ale wariat. Gra wszędzie i wszędzie dobrze.</div>
 
-  <section>
-    <h2>Zdjęcie drużynowe</h2>
-    <img src="zdjęcie.jpeg" alt="Zdjęcie drużyny" class="team-photo" />
-  </section>
+</section>
 
-  <section>
-    <h2>Wyniki meczów</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Kolejka</th>
-          <th>Wynik</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Kolejka 1</td>
-          <td><span class="loss">PSTO Huk Bomba 8 - 10 Stary Żmigród</span></td>
-        </tr>
-        <tr>
-          <td>Kolejka 2</td>
-          <td><span class="loss">PSTO Huk Bomba 5 - 10 Stary Żmigród</span></td>
-        </tr>
-        <tr>
-          <td>Puchar Korony Królów</td>
-          <td><span class="win">PSTO Huk Bomba 13 - 12 Stary Żmigród</span></td>
-        </tr>
-        <tr>
-          <td>Kolejka 4</td>
-          <td><span class="win">PSTO Huk Bomba 9 - 8 Stary Żmigród</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+<section>
+  <h2>Pozycje na boisku</h2>
+  <svg viewBox="0 0 300 500" aria-label="Boisko i pozycje graczy">
+    <rect x="0" y="0" width="300" height="500" fill="#a8d08d"/>
+    <line x1="0" y1="250" x2="300" y2="250" stroke="white" stroke-width="2"/>
+    <circle cx="150" cy="250" r="30" stroke="white" stroke-width="2" fill="none"/>
+    <circle cx="150" cy="250" r="2" fill="white"/>
+    <text x="150" y="60" text-anchor="middle" fill="black" font-size="18">Lichu</text>
+    <text x="80" y="200" text-anchor="middle" fill="black" font-size="14">Julu</text>
+    <text x="220" y="200" text-anchor="middle" fill="black" font-size="14">Pimpek</text>
+    <text x="80" y="300" text-anchor="middle" fill="black" font-size="14">Mati Miśki</text>
+    <text x="220" y="300" text-anchor="middle" fill="black" font-size="14">Szymon</text>
+    <text x="150" y="400" text-anchor="middle" fill="black" font-size="14">Pawełek</text>
+    <text x="150" y="470" text-anchor="middle" fill="black" font-size="14">Kuchta</text>
+  </svg>
+</section>
 
-  <section>
-    <h2>Kontakt</h2>
-    <form action="mailto:lokatorzymojrzeszow@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Twoje imię" required />
-      <input type="email" name="email" placeholder="Twój email" required />
-      <textarea name="message" placeholder="Wiadomość" rows="4" required></textarea>
-      <input type="submit" value="Wyślij" />
-    </form>
-  </section>
+<section>
+  <h2>Zdjęcie drużynowe</h2>
+  <img src="img/team.jpg" alt="Zdjęcie drużyny" class="team-photo" />
+</section>
 
-  <section>
-    <h2>Instagram</h2>
-    <p>Obserwuj nas na <a href="https://www.instagram.com/psto_huk_bomba/" target="_blank" rel="noopener noreferrer">Instagramie</a>!</p>
-  </section>
+<section>
+  <h2>Wyniki meczów</h2>
+  <table>
+    <thead><tr><th>Kolejka</th><th>Wynik</th></tr></thead>
+    <tbody>
+      <tr><td>Kolejka 1</td><td><span class="loss">PSTO Huk Bomba 8 - 10 Stary Żmigród</span></td></tr>
+      <tr><td>Kolejka 2</td><td><span class="loss">PSTO Huk Bomba 5 - 10 Stary Żmigród</span></td></tr>
+      <tr><td>Puchar Korony Królów</td><td><span class="win">PSTO Huk Bomba 13 - 12 Stary Żmigród</span></td></tr>
+      <tr><td>Kolejka 4</td><td><span class="win">PSTO Huk Bomba 9 - 8 Stary Żmigród</span></td></tr>
+    </tbody>
+  </table>
+</section>
 
-  <section>
-    <h2>Hasła Klubu</h2>
-    <ul>
-      <li>🔥 "Z nami zawsze po bombie!"</li>
-      <li>⚽ "Więcej stylu niż skilla!"</li>
-      <li>🚬 "Nie ważne jak grasz, ważne że z nami!"</li>
-      <li>🍻 "Przegraliśmy? Ale przynajmniej był grill!"</li>
-    </ul>
-  </section>
+<section>
+  <h2>Kontakt</h2>
+  <form action="mailto:lokatorzymojrzeszow@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Twoje imię" required />
+    <input type="email" name="email" placeholder="Twój email" required />
+    <textarea name="message" placeholder="Wiadomość" rows="4" required></textarea>
+    <input type="submit" value="Wyślij" />
+  </form>
+</section>
 
-  <footer>
-    &copy; 2025 PSTO Huk Bomba – Wszystkie prawa zastrzeżone.
-  </footer>
+<section>
+  <h2>Instagram</h2>
+  <p>Obserwuj nas na <a href="https://www.instagram.com/psto_huk_bomba/" target="_blank" rel="noopener noreferrer">Instagramie</a>!</p>
+</section>
 
-</body>
-</html>
+<section>
+  <h2>Hasła Klubu</h2>
+  <ul>
+    <li>🔥 "Z nami zawsze po bombie!"</li>
+    <li>⚽ "Więcej stylu niż skilla!"</li>
+    <li>🚬 "Nie ważne jak grasz, ważne że z nami!"</li>
+    <li>🍻 "Przegraliśmy? Ale przynajmniej był grill!"</li>
+  </ul>
+</section>
 
-<html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <title>Boisko FIFA - Drużyna</title>
-  <style>
-    body {
-      background-color: #e0f7fa;
-      font-family: Arial, sans-serif;
-    }
-    .boisko {
-      position: relative;
-      width: 1000px;
-      height: 600px;
-      background: linear-gradient(#4caf50, #388e3c);
-      margin: 40px auto;
-      border: 10px solid white;
-      border-radius: 20px;
-    }
-    .zawodnik {
-      position: absolute;
-      text-align: center;
-      color: white;
-      font-weight: bold;
-    }
-    .zawodnik img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 5px;
-    }
-  </style>
-</head>
-<body>
-
-<div class="boisko">
-  <!-- Lichu (Bramkarz) -->
-  <div class="zawodnik" style="left: 450px; top: 500px;">
-    <img src="/mnt/data/IMG_20250603_220515.jpg" alt="Lichu">
-    <div>Lichu<br>(Bramkarz)</div>
-  </div>
-
-  <!-- Pawełek (Obrońca) -->
-  <div class="zawodnik" style="left: 150px; top: 380px;">
-    <img src="/mnt/data/IMG_20250603_221012.jpg" alt="Pawełek">
-    <div>Pawełek<br>(Obrońca)</div>
-  </div>
-
-  <!-- Julu (Obrońca) -->
-  <div class="zawodnik" style="left: 750px; top: 380px;">
-    <img src="/mnt/data/IMG_20250603_220555.jpg" alt="Julu">
-    <div>Julu<br>(Obrońca)</div>
-  </div>
-
-  <!-- Pimpek (Środkowy pomocnik) -->
-  <div class="zawodnik" style="left: 450px; top: 300px;">
-    <img src="/mnt/data/IMG_20250603_220947.jpg" alt="Pimpek">
-    <div>Pimpek<br>(Środkowy pomocnik)</div>
-  </div>
-
-  <!-- Mati Miśki (Prawy skrzydłowy) -->
-  <div class="zawodnik" style="left: 800px; top: 200px;">
-    <img src="/mnt/data/IMG_20250603_220807.jpg" alt="Mati Miśki">
-    <div>Mati Miśki<br>(Prawy skrzydłowy)</div>
-  </div>
-
-  <!-- Szymon (Lewy skrzydłowy) -->
-  <div class="zawodnik" style="left: 100px; top: 200px;">
-    <img src="/mnt/data/IMG_20250603_220539.jpg" alt="Szymon">
-    <div>Szymon<br>(Lewy skrzydłowy)</div>
-  </div>
-
-  <!-- Kuchta (Napastnik) -->
-  <div class="zawodnik" style="left: 450px; top: 100px;">
-    <img src="/mnt/data/IMG_20250603_220922.jpg" alt="Kuchta">
-    <div>Kuchta<br>(Napastnik)</div>
-  </div>
-</div>
+<footer>
+  &copy; 2025 PSTO Huk Bomba – Wszystkie prawa zastrzeżone.
+</footer>
 
 </body>
 </html>
